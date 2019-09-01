@@ -1,5 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-const Buddy = props => (
-    <div key={props.id} className="" onClick=
-)
+const Buddy = (props) => <div key={props.id} className="" onClick="" />;
+
+export default Buddy;

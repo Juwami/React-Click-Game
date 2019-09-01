@@ -1,13 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function Header() {
-    return (
-        <div className="text-center border-bottom">
-            <h1 className="display-1 font-weight-bold">
-                React-Clicky-Game
-            </h1>
-        </div>
-    )
+	return (
+		<div className="text-center border-bottom">
+			<h1 className="display-1 font-weight-bold">React-Clicky-Game</h1>
+		</div>
+	);
 }
 
-export default Header
+export default Header;
