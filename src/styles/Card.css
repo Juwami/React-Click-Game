@@ -1,0 +1,11 @@
+img {
+    width: 150px;
+    height: 150px
+}
+
+#starletCard {
+    /* width: auto;
+    height: auto; */
+    display: inline-flex;
+    /* justify-content: space-between; */
+}

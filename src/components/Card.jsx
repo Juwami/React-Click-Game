@@ -1,8 +1,9 @@
 import React from 'react';
+import '../styles/Card.css'
 
 const Card = (props) => (
-	<div key={props.id} className="" onClick="">
-		<img alt={props.name} src={props.image} />
+	<div id="starletCard" key={props.id} onClick="">
+		<img className="rounded-circle" id={props.id} alt={props.name} src={props.image} />
 	</div>
 );
 

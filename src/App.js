@@ -12,7 +12,7 @@ class App extends Component {
 	};
 
 	shuffleArray = Starlet => {
-		for ( i = Starlet.length - 1; i > 0; i--) {
+		for (let i = Starlet.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1))
 			const k = Starlet[i];
 			Starlet[i] = Starlet[j];
