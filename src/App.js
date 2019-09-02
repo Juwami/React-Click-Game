@@ -7,8 +7,19 @@ import Board from './components/Board'
 class App extends Component {
 	state = {
 		Score: 0,
-		highScore: 0
+		highScore: 0,
+		Starlet
 	};
+
+	shuffleArray = Starlet => {
+		for ( i = Starlet.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1))
+			const k = Starlet[i];
+			Starlet[i] = Starlet[j];
+			Starlet[j] = k
+		}
+		return Starlet
+	}
 	render() {
 		return (
 			<div>
