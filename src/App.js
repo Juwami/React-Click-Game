@@ -8,7 +8,8 @@ class App extends Component {
 	state = {
 		Score: 0,
 		highScore: 0,
-		Starlet
+		Starlet,
+		clickArr: []
 	};
 
 	shuffleArray = Starlet => {
