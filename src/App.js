@@ -21,12 +21,25 @@ class App extends Component {
 		}
 		return Starlet
 	}
+
+	componentDidMount() {
+		this.setState({Starlet:this.shuffleArray(this.state.Starlet)})
+		// console.log(this.state.Starlet)
+	}
+	imagedClicked = (id) => {
+		console.log(id)
+		let newScore = this.state.Score
+		newScore++
+		this.setState({Score: newScore})
+
+		this.componentDidMount()
+	}
 	render() {
 		return (
 			<div>
 				<Header />
 				<Scoreboard Score={this.state.Score} highScore={this.state.highScore} />
-				<Board Starlet={this.state.Starlet} Clicked={this.Clicked} />
+				<Board Starlet={this.state.Starlet} Clicked={this.imagedClicked} />
 			</div>
 		);
 	}
