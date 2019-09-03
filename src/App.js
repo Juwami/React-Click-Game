@@ -28,9 +28,13 @@ class App extends Component {
 	}
 	imagedClicked = (id) => {
 		console.log(id)
-		let newScore = this.state.Score
-		newScore++
-		this.setState({Score: newScore})
+		//upadate the clickArr to a copy of the current clickArr, with the new id added
+		this.setState({
+			clickArr: [...this.clickArr, id],
+			Score: this.newScore,
+			highScore: this.newHighScore
+		})
+		console.log(this.state.clickArr)
 
 		this.componentDidMount()
 	}
