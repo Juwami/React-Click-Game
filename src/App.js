@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import Scoreboard from './components/Scoreboard';
 import Starlet from './data/Starlet.json';
-import Board from './components/Board'
+import Board from './components/Board';
 
 class App extends Component {
 	state = {
@@ -12,32 +12,30 @@ class App extends Component {
 		clickArr: []
 	};
 
-	shuffleArray = Starlet => {
+	shuffleArray = (Starlet) => {
 		for (let i = Starlet.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1))
+			const j = Math.floor(Math.random() * (i + 1));
 			const k = Starlet[i];
 			Starlet[i] = Starlet[j];
-			Starlet[j] = k
+			Starlet[j] = k;
 		}
-		return Starlet
-	}
+		return Starlet;
+	};
 
 	componentDidMount() {
-		this.setState({Starlet:this.shuffleArray(this.state.Starlet)})
-		// console.log(this.state.Starlet)
+		this.setState({ Starlet: this.shuffleArray(this.state.Starlet) });
 	}
-	imagedClicked = (id) => {
-		console.log(id)
-		//upadate the clickArr to a copy of the current clickArr, with the new id added
-		this.setState({
-			clickArr: [...this.clickArr, id],
-			Score: this.newScore,
-			highScore: this.newHighScore
-		})
-		console.log(this.state.clickArr)
 
-		this.componentDidMount()
-	}
+	imagedClicked = (id) => {
+		console.log(this.state.clickArr.find(x => x == id));
+
+		this.setState({
+			clickArr: [ ...this.state.clickArr, id ],
+			Score: this.state.newScore,
+			highScore: this.state.newHighScore,
+			Starlet: this.shuffleArray(this.state.Starlet)
+		});
+	};
 	render() {
 		return (
 			<div>
