@@ -27,7 +27,7 @@ class App extends Component {
 	}
 
 	imagedClicked = (id) => {
-		console.log(this.state.clickArr.find(x => x == id));
+		console.log(this.state.clickArr.find(x => x === id));
 
 		this.setState({
 			clickArr: [ ...this.state.clickArr, id ],
